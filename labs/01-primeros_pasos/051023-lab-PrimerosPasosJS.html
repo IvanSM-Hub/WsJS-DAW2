@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeros pasos con JavaScript</title>
+    <script>
+
+        //Primera Parte
+        function media(array) {
+            let suma=0;
+            let acumulador=0;
+            for (i=0;i<array.length;i++){
+                if(array[i]>=0 && array[i]<=100){
+                    acumulador++
+                    suma+=array[i];
+                }
+            }
+            return suma/acumulador;
+        }
+        let nums = [5,8,9,10,5,6,8,11,6,4];
+        console.log("Media de un array")
+        console.log(media(nums));
+        
+        //Segunda Parte
+        class Motor {
+            
+            #tipoMotor
+            #cv
+            #consumo
+
+            //constructor
+            constructor(tipoMotor,cv,consumo){
+                this.#tipoMotor=tipoMotor;
+                this.#cv=cv;
+                this.#consumo=consumo;
+            }
+
+            //getter and setter
+            get tipoMotor() {
+                return this.#tipoMotor;
+            }
+            set tipoMotor(value) {
+                this.#tipoMotor=value;
+            }
+
+            get cv() {
+                return this.#cv;
+            }
+            set cv(value) {
+                this.#cv=value;
+            }
+
+            get consumo() {
+                return this.#consumo;
+            }
+            set consumo(value) {
+                this.#consumo=value;
+            }
+
+        }
+        
+        class Coche {
+            #marca
+            #modelo
+            #matricula
+            #motor
+
+            //constructor
+            constructor(marca,modelo,matricula,motor){
+                this.#marca=marca;
+                this.#modelo=modelo;
+                this.#matricula=matricula;
+                this.#motor=motor;
+            }
+
+            //getter and setter
+            get marca() {
+                return this.#marca;
+            }
+            set marca(value) {
+                this.#marca=value;
+            }
+
+            get modelo() {
+                return this.#modelo;
+            }
+            set modelo(value) {
+                this.#modelo=value;
+            }
+
+            get matricula() {
+                return this.#matricula;
+            }
+            set matricula(value) {
+                this.#matricula=value;
+            }
+
+        }
+
+        let motor1 = new Motor("gasolina",100,5.6);
+        let coche1 = new Coche("Ford","Focus","AAA-1234",motor1);
+
+        console.log("Objeto coche");
+        console.log(coche1);
+
+    </script>
+</head>
+<body>
+    <div>
+        <h2>Primera parte:</h2>
+        <span id="primeraParte"></span>
+    </div>
+</body>
+</html>
