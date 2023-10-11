@@ -5,19 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Práctica 01</title>
+    <script type="text/javascript" src="main.js"></script>
+    <style>
+
+        * {font-family: sans-serif;}
+
+        .titulo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: blueviolet;
+        }
+
+        #container {
+            width: 500px;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid blueviolet;
+            margin: auto;
+        }
+
+        #boton {
+            margin-top: 15px;
+        }
+
+        .camposForms{
+            display: block;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .submit{
+            margin-top: 15px;
+        }
+
+    </style>
 </head>
 
 <body>
-    <div>
-        <div>
-            <h1>Formulario de inscripción</h1>
+    <div id="container">
+        <div class="titulo">
+            <span>Formulario de inscripción</span>
         </div>
-        <div></div>
-        <div id="forms">
-            <form action="prueba" method="post">
-                
-            </form>
+        <div id="boton">
+            <button onclick="crearForms()">Ver Formulario</button>
         </div>
+        <div id="cajaForms"></div>
     </div>
 </body>
 
