@@ -28,8 +28,15 @@
             margin-top: 15px;
         }
 
+        form{
+            margin-top: 20px;
+        }
+
+        fieldset {
+            padding: 15px;
+        }
+
         .camposForms{
-            display: block;
             width: 100%;
             margin-top: 15px;
         }
@@ -47,7 +54,7 @@
             <span>Formulario de inscripción</span>
         </div>
         <div id="boton">
-            <button onclick="crearForms()">Ver Formulario</button>
+            <button id="botonCrearForms" onclick="crearForms(),borrarEvento()">Ver Formulario</button>
         </div>
         <div id="cajaForms"></div>
     </div>
