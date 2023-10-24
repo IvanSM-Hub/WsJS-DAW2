@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajando con eventos</title>
+    <script src="eventos.js" defer></script>
+    <style>
+        * {font-family: sans-serif;}
+        .m-auto{margin:auto;}
+        .mt-25{margin-top: 25px;}
+        .width-50{width: 50%;}
+    </style>
+</head>
+<body>
+    <div class="m-auto mt-25 width-50">
+        <!-- Ejercicio 1 -->
+        <div>
+            <p>
+                <h2>Ejercicio 1</h2>
+            </p>
+            <p>Haz una página web que realice la suma de dos números. Para ello tendremos dos cajas de texto donde podremos poner los dos números y otra caja de texto donde se mostrará el resultado. Tendremos un botón “sumar” que al pulsarlo realice la operación. Nota: Es posible que necesites usar la función “parseInt” para convertir el texto en formato numérico.</p>
+        </div>
+        <!-- Ejercicio 2 -->
+        <div>
+            <p>
+                <h2>Ejercicio 2</h2>
+            </p>
+            <p>Añade la funcionalidad de restar, multiplicar y dividir al ejercicio anterior. Para ello pondremos 3 botones mas que realicen las operaciones (restar, multiplicar y dividir), pero reutilizaremos las 3 cajas de texto que tenemos.</p>
+        </div>
+        <div>
+            <p>
+                <h2>Resolución</h2>
+            </p>
+            <div>
+                <form action="url" method="get">
+                    <label for="num1">Número 1:</label><br>
+                    <input type="number" name="num1" id="num1"><br><br>
+                    <label for="num1">Número 2:</label><br>
+                    <input type="number" name="num2" id="num2"><br><br>
+                    <input type="button" id="sumarNum" value="Sumar">
+                    <input type="button" id="restarNum" value="Restar">
+                    <input type="button" id="multiplicarNum" value="Multiplicar">
+                    <input type="button" id="dividirNum" value="Dividir"><br><br>
+                    <label for="">Resultado:</label><br>
+                    <input type="number" name="resultado" id="resultado"><br><br>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
