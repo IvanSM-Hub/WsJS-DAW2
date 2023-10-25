@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajando con eventos 2</title>
+    <script src="eventos-Ej_03_04.js" defer></script>
+    <style>
+        * {font-family: sans-serif;}
+        .m-auto{margin:auto;}
+        .mt-25{margin-top: 25px;}
+        .width-50{width: 50%;}
+        .error-border{border:1px solid rgb(248, 54, 54)}
+        .ok-border{border:1px solid rgb(39, 150, 39)}
+    </style>
+</head>
+<body>
+    <div class="m-auto mt-25 width-50">
+        <!-- Ejercicio 3 -->
+        <div>
+            <p>
+                <h2>Ejercicio 3</h2>
+            </p>
+            <p>Realiza una pagina web que simule una página de login de usuario. Solo podremos entrar cuando el usuario sea “pepe” y la contraseña sea “1234”. Tendremos dos cajas de texto para cada entrada y un botón para comprobar el usuario. En caso afirmativo, aparecerá el mensaje “Usuario y password correcto” justo debajo, en caso contrario, aparecerá el mensaje “Algún campo no es correcto”.</p>
+        </div>
+        <!-- Ejercicio 4 -->
+        <div>
+            <p>
+                <h2>Ejercicio 4</h2>
+            </p>
+            <p>Repite el ejercicio anterior pero esta vez el usuario y el password tiene que estar en un array de objetos Usuario. La clase Usuario debe tener los atributos nombre y password, El array tendrá 3 objetos usuario creados al principio del programa.</p>
+        </div>
+        <div>
+            <p>
+                <h2>Resolución</h2>
+            </p>
+            <div>
+                <form action="url" method="get">
+                    <label for="user">Usuario</label><br>
+                    <input type="text" name="user" id="user"><br><br>
+                    <label for="pass">Contraseña</label><br>
+                    <input type="password" name="pass" id="pass"><br><br>
+                    <input type="button" value="Verificar" id="verificar">
+                </form>
+                <div class="mt-25" id="verificacion"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
