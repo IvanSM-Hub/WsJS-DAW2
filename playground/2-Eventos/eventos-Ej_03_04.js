@@ -1,39 +1,3 @@
-
-class Usuario {
-    usuario;
-    password;
-
-    constructor(usuario,password){
-        this.usuario=usuario;
-        this.password=password;
-    }
-
-    get getUsuario(){
-        return this.usuario;
-    }
-
-    set setUsuario(value){
-        this.usuario=value;
-    }
-
-    get getPassword(){
-        return this.password;
-    }
-
-    set setPassword(value){
-        this.password=value;
-    }
-
-}
-
-function cargarUsuarios () {
-    let usuarios = [user1,user2,user3];
-    var user1 = new Usuario ("ivan","admin");
-    var user2 = new Usuario ("luis","4689");
-    var user3 = new Usuario ("pepe","1234");
-    return usuarios;
-}
-
 function errorVerificacion(input) {
     input.classList.remove("ok-border");
     input.classList.toggle("error-border");
@@ -86,40 +50,77 @@ verificar.onclick = function (e) {
 //Resolución Ejercicio 4
 verificar.onclick = function (e) {
 
-    let usu = user.value;
-    let passw = pass.value;
-    let textVerif = "";
+    var usuarios = [{nombre:"ivan",password:"5678"},{nombre:"pepe",password:"1234"},{nombre:"luis",password:"admin1"}];
 
-    let usuarios = cargarUsuarios();
+    var usu = user.value;
+    var passw = pass.value;
+    var textVerif = "";
 
-    //console.log(usu);
-    //console.log(passw);
-    console.log(usuarios[0].getUsuario);
+    var usuarioEncontrado = false;
+    var passwordEncontrada = false;
+
     
 
-    for(var int; int<usuarios.length;i++){
+    console.log("----------------")
 
-        if(usu!=usuarios[i].getUsuario()){
-            errorVerificacion(user);
-            user.value="";
-            pass.value="";
-            textVerif="El usuario no es correcto";
-            verificacion.style="color:red;"
-    
-        }else{
+    for(var i = 0; i<usuarios.length;i++){
+
+        if(usuarios[i].nombre==usu){
+        
+            usuarioEncontrado = true;
+
+            if (usuarios[i].password==passw){
+
+                passwordEncontrada=true;
+                break
             
-            okVerificacion(user);
-            
-            if(passw!=usuarios[i].getPassword){
-                errorVerificacion(pass);
-                textVerif="La contraseña no es correcta";
-                verificacion.style="color:red;"
-            }else{
-                okVerificacion(pass);
+            } else {
+                passwordEncontrada=false;
+                break;
             }
-        }
+
+        } else {
+
+            usuarioEncontrado = false;
+        
+        }   
 
     }
+
+    console.log(usu)
+    console.log(passw)
+    console.log(usuarioEncontrado)
+    console.log(passwordEncontrada)
+
+    if (usuarioEncontrado) {
+
+        okVerificacion(user);
+
+        if (passwordEncontrada) {
+
+            okVerificacion(pass);
+    
+        } else {
+    
+            errorVerificacion(pass);
+            user.value="";
+            pass.value="";
+            textVerif="La contraseña no es correcta";
+            verificacion.style="color:red;";
+    
+        }
+
+    } else {
+
+        errorVerificacion(user);
+        user.value="";
+        pass.value="";
+        textVerif="El usuario no es correcto";
+        verificacion.style="color:red;";
+
+    }
+
+    
 
     verificacion.textContent = textVerif;
     
