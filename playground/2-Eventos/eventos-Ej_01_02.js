@@ -1,3 +1,4 @@
+
 function sumar(num1,num2){
     return num1+num2;
 }
@@ -29,6 +30,7 @@ sumarNum.onclick = function (e){
 
 }
 
+//Ejercicio2:
 restarNum.onclick = function (e){
     
     //Cojemos los numeros que me pasa por los campos.
