@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Práctica AJAX</title>
-    <script src="ajax.js"></script>
+    <script src="ajax.js" defer></script>
 </head>
+
 <body>
-    
+    <h2>PizzaPlanet</h2>
+    <div id="contenedor">
+        <label for="nombre">Nombre</label>
+        <br>
+        <input type="text" id="nombre" name="nombre">
+        <br>
+        <label for="direccion">Dirección</label>
+        <br>
+        <input type="text" id="direccion" name="direccion">
+        <br>
+        <label for="telefono">Teléfono</label>
+        <br>
+        <input type="text" id="telefono" name="telefono">
+        <br>
+        <label for="email">E-mail</label>
+        <br>
+        <input type="text" id="email" name="email">
+        <br>
+        <label id="elegirTamanyo" for="pizzaSize">Elija el tamaño de la pizza(*):</label>
+        <!-- Aquí van los tamaños -->
+        <label for="ingredients">Elija tus ingredientes extra para la pizza:</label>
+        <br>
+        <input type="checkbox" id="Beacon" name="ingredientes" value="1">
+        <label for="Bacon">Bacon +1€</label>
+        <br>
+        <input type="checkbox" id="Atún" name="ingredientes" value="1">
+        <label for="Atún">Atún +1€</label>
+        <br>
+        <input type="checkbox" id="Salchichas" name="ingredientes" value="1">
+        <label for="Salchichas">Salchichas +1€</label>
+        <br>
+        <input type="checkbox" id="Huevo" name="ingredientes" value="1">
+        <label for="Huevo" id="huevoLabel">Huevo +1€</label>
+        <br>
+        <button id="submit" value="Submit">Procesar Pedido</button>
+    </div>
 </body>
+
 </html>
