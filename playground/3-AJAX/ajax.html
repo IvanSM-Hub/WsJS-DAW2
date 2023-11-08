@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Práctica AJAX</title>
     <script src="ajax.js" defer></script>
+    <style>
+
+        
+
+    </style>
 </head>
 
 <body>
     <h2>PizzaPlanet</h2>
+    <button id="actualizar">Actualizar</button>
     <div id="contenedor">
         <label for="nombre">Nombre</label>
         <br>
@@ -27,23 +33,15 @@
         <br>
         <input type="text" id="email" name="email">
         <br>
-        <label id="elegirTamanyo" for="pizzaSize">Elija el tamaño de la pizza(*):</label>
+        <label for="pizzaSize">Elija el tamaño de la pizza(*):</label>
         <!-- Aquí van los tamaños -->
-        <label for="ingredients">Elija tus ingredientes extra para la pizza:</label>
-        <br>
-        <input type="checkbox" id="Beacon" name="ingredientes" value="1">
-        <label for="Bacon">Bacon +1€</label>
-        <br>
-        <input type="checkbox" id="Atún" name="ingredientes" value="1">
-        <label for="Atún">Atún +1€</label>
-        <br>
-        <input type="checkbox" id="Salchichas" name="ingredientes" value="1">
-        <label for="Salchichas">Salchichas +1€</label>
-        <br>
-        <input type="checkbox" id="Huevo" name="ingredientes" value="1">
-        <label for="Huevo" id="huevoLabel">Huevo +1€</label>
-        <br>
+        <div id="elegirTamanyo"></div>
+        <label for="ingredientes">Elija tus ingredientes extra para la pizza:</label>
+        <!-- Aquí van los ingredientes -->
+        <div id="elegirIngrediente"></div>
         <button id="submit" value="Submit">Procesar Pedido</button>
+        <!-- Aquí van los tamaños -->
+        <div id="resultado"></div>
     </div>
 </body>
 

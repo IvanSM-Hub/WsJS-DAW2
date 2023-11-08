@@ -18,19 +18,19 @@
                 "precio":1
             },{
                 "ingrediente":"jamón york",
-                "precio":1
+                "precio":0.5
             },{
                 "ingrediente":"champiñones",
-                "precio":1
+                "precio":0.5
             },{
                 "ingrediente":"queso",
-                "precio":1
+                "precio":2
             },{
                 "ingrediente":"cebolla",
                 "precio":1
             },{
                 "ingrediente":"berengena",
-                "precio":1
+                "precio":2
             }
         ]
     }
